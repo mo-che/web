@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  web:
+    build: ./web
+    volumes: 
+      - ./web/:/web/
+    ports: 
+      - "8003:8003"
+    restart: always
+    command: "sh run.sh"
